@@ -1,11 +1,13 @@
 #!/bin/sh
 
-#MACOS NETWORK AUTO PROXY DISCOVERY SCRIPT
+#MACOS NETWORK SETTINGS SCRIPT
 
-#syntax
-#networksetup -setautoproxydiscovery INTERFACE on
-#see manpage for more information
+#Turn off wifi
+networksetup -setnetworkserviceenabled Wi-Fi off
 
+#LAN proxy settings
 networksetup -setautoproxydiscovery Ethernet on
+
+#see manpage for more information
 
 #END OF SCRIPT
