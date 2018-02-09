@@ -9,10 +9,10 @@
 #echo ${computername} | awk 'BEGIN {FS="-"}; {print $1"-"$2"-"$3}'
 computername= $(scutil --get ComputerName)
 case $computername in
-"room1"*)
+"OW-MK-102"*)
   printer='OW-MK102-LaserJet'
   ;;
-"room2"*)
+"OW-MK-203"*)
   printer='OW-MK203-LaserJet'
   ;;
 *)
