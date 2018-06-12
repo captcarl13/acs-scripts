@@ -1,7 +1,5 @@
 #!/bin/sh
-
 #MACOS NETWORK SETTINGS SCRIPT
-
 #see networksetup manpage for more information
 
 #Turn off wifi
