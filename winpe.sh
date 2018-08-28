@@ -6,7 +6,7 @@ sleep 1
 afplay /System/Library/Sounds/Funk.aiff & read -p "Please insert a USB drive, then press RETURN to continue..."
 sleep 2
 #DISKUTIL lists disks, use READ to find correct disk for USB
-diskutil list
+diskutil list external
 sleep 1
 afplay /System/Library/Sounds/Sosumi.aiff & read -p "Please enter disk NUMBER for USB drive (eg. /dev/disk#) that is listed above: " -e input
 ECHO Selected /dev/disk$input
