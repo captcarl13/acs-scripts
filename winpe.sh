@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#NOTE this script will only work on macOS, not *nix due to DISKUTIL being macOS-specific
+# NOTE this script will only work on macOS, not *nix due to DISKUTIL being macOS-specific
 ECHO NYIT ACS WinPE Bootable USB creation script, version BASH
 sleep 1
 afplay /System/Library/Sounds/Funk.aiff & read -p "Please insert a USB drive, then press RETURN to continue..."
@@ -25,7 +25,7 @@ afplay /System/Library/Sounds/Sosumi.aiff & read -r -p "You have selected /dev/d
 sleep 1
 ECHO Format complete!
 sleep 3
-#//owacaddist-srv/GhostImages must be mounted to /Volumes/GhostImages in order for this section to work
+# //owacaddist-srv/GhostImages must be mounted to /Volumes/GhostImages in order for this section to work
 ECHO Copying WinPE files...
 sleep 1
 rsync -vrh --progress --delete /Volumes/GhostImages/WinPE/USB/ ~/WinPE
