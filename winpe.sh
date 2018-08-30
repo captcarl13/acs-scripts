@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # NOTE this script will only work on macOS, not *nix due to DISKUTIL being macOS-specific
-ECHO NYIT ACS WinPE Bootable USB creation script, version BASH
+ECHO NYIT ACS WinPE Bootable media creation script, version BASH
 sleep 1
 afplay /System/Library/Sounds/Funk.aiff & read -p "Please insert a USB drive, then press RETURN to continue..."
 sleep 2
