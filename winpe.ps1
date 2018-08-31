@@ -8,16 +8,13 @@ If you want to create media in an existing Windows environment, follow the docum
 located in \\owcaddist-srv\GhostImages\WinPE\WINDOWS PE IMAGE AUTOMATION.docx
 #>
 wait 1
-Write-Output NYIT ACS WinPE bootable media creation script, version PowerShell
+Write-Output "NYIT ACS WinPE bootable media creation script, version PowerShell"
 wait 1
 <#
 DISKPART BEGINS HERE
 #>
-Get-Disk | Where-Object -FilterScript {$_.Bustype -Eq "USB"}
-wait 3
-Clear-Disk -Number 1 -RemoveData
-wait 3
-Initialize-Disk -Number 1 -PartitionStyle MBR
+Get-Disk 1 | Clear-Disk -RemoveData
+New-Partition -DiskNumber 1 -UseMaximumSize -IsActive -DriveLetter U | Format-Volume -FileSystem FAT32 -NewFileSystemLabel ACS
 <#
   Force assign to always mount USB to a unique drive letter, like U:\?
   By doing this, the script could run fully-automated?
