@@ -34,6 +34,6 @@ rsync -varh --progress ~/WinPE/ /Volumes/ACS
 sleep 3
 diskutil unmountDisk /dev/disk$input
 sleep 5
-afplay /System/Library/Sounds/Glass.aiff & ECHO Boootable USB creation complete!
+afplay /System/Library/Sounds/Glass.aiff & ECHO Bootable USB creation complete!
 sleep 1
 ECHO Please remove the USB drive from the computer.
