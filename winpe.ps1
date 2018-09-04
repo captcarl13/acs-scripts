@@ -10,10 +10,12 @@
 Start-Sleep -s 1
 Write-Output "NYIT ACS WinPE bootable media creation script, version PowerShell"
 Start-Sleep -s 1
+Read-Host "Please insert a USB drive, then press ENTER to continue..."
+Start-Sleep -s 1
 <#
   DISKPART BEGINS HERE
 #>
-Get-Disk 1 | Clear-Disk -RemoveData #prompts user to confirm, possibly always confirm as yes?
+Get-Disk 1 | Clear-Disk -RemoveData
 Start-Sleep -s 1
 Write-Output "Formatting USB as ACS bootable drive, please stand by..."
 Start-Sleep -s 1
@@ -23,13 +25,18 @@ New-Partition -DiskNumber 1 -UseMaximumSize -IsActive -DriveLetter U | Format-Vo
   DISKPART ENDS HERE & ROBOCOPY BEGINS HERE
 #>
 Start-Sleep -s 1
+Write-Output "Format complete!"
+Start-Sleep -s 3
 Write-Output "Copying WinPE files..."
-ROBOCOPY /S /XO O:\WinPE\USB\ U:\
+Start-Sleep -s 1
+robocopy /S /XO O:\WinPE\USB\ U:\
 <#
   robocopy ends here
-  #>
+#>
 Start-Sleep -s 1
 Write-Output "Bootable USB creation complete!"
+Start-Sleep -s 1
+Write-Output "Please remove the USB drive from the computer."
 <#
   end of script
 #>
