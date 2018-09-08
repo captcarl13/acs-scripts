@@ -17,7 +17,7 @@
 Start-Sleep -s 1
 Write-Output "NYIT ACS WinPE bootable media creation script, version PowerShell"
 Start-Sleep -s 1
-Read-Host "Please insert a USB drive, then press ENTER to continue..."
+Read-Host "Please insert a USB drive, then press ENTER to continue"
 Start-Sleep -s 1
 <#
   DISKPART BEGINS HERE
