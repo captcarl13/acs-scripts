@@ -28,9 +28,9 @@ sleep 3
 # //owacaddist-srv/GhostImages must be mounted to /Volumes/GhostImages in order for this section to work
 ECHO Copying WinPE files...
 sleep 1
-rsync -vrh --progress --delete /Volumes/GhostImages/WinPE/USB/ ~/WinPE
+rsync -vru --progress --delete /Volumes/GhostImages/WinPE/USB/ ~/WinPE
 sleep 2
-rsync -varh --progress ~/WinPE/ /Volumes/ACS
+rsync -vru --progress ~/WinPE/ /Volumes/ACS
 sleep 3
 diskutil unmountDisk /dev/disk$input
 sleep 5
