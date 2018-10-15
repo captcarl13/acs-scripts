@@ -8,4 +8,4 @@ mk_printer_script.sh: macOS; Used to install printers in MK102 and MK203. Not qu
 
 winpe.sh: macOS version of USB media creation script. Must run from admin computer.
 
-winpe.ps1: PowerShell version of USB media creation script. Must be run from PE.
+winpe.ps1: PowerShell version of USB media creation script. Must be run from preinstall environment (WinPE).
