@@ -1,7 +1,4 @@
 <#
-  Maybe add the ability to create Bootable Media with an existing WinPE environment
-  and add this to the existing system's hidden menu? -cv
-
   NOTE: This script is intended to work only in a preimage environment.
   If you want to create media in an existing Windows environment, follow the documentation
   located in \\owcaddist-srv\GhostImages\WinPE\WINDOWS PE IMAGE AUTOMATION.docx
