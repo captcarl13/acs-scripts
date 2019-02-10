@@ -17,7 +17,7 @@ Start-Sleep -s 1
 <#
   DISKPART BEGINS HERE
 #>
-Get-Disk | Where-Object -FilterScript {$_.Bustype -Eq "USB"}
+Get-Disk | Where-Object -FilterScript {$_.Bustype -Eq "USB"} | Clear-Disk -RemoveData
 Start-Sleep -s 1
 Write-Output "Formatting USB as ACS bootable drive, please stand by..."
 Start-Sleep -s 1
@@ -31,7 +31,7 @@ Write-Output "Format complete!"
 Start-Sleep -s 3
 Write-Output "Copying WinPE files..."
 Start-Sleep -s 1
-robocopy /S /XO O:\WinPE\USB\ U:\
+robocopy /S /XO /V O:\WinPE\USB\ U:\
 <#
   robocopy ends here
 #>
