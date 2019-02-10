@@ -17,7 +17,7 @@ Start-Sleep -s 1
 <#
   DISKPART BEGINS HERE
 #>
-Get-Disk 1 | Clear-Disk -RemoveData
+Get-Disk | Where-Object -FilterScript {$_.Bustype -Eq "USB"}
 Start-Sleep -s 1
 Write-Output "Formatting USB as ACS bootable drive, please stand by..."
 Start-Sleep -s 1
