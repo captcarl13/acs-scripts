@@ -31,7 +31,7 @@ Write-Output "Format complete!"
 Start-Sleep -s 3
 Write-Output "Copying WinPE files..."
 Start-Sleep -s 1
-robocopy /S /XO O:\WinPE\USB\ U:\
+robocopy /S /XO /V O:\WinPE\USB\ U:\
 <#
   robocopy ends here
 #>
