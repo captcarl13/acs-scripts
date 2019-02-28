@@ -25,7 +25,7 @@ afplay /System/Library/Sounds/Sosumi.aiff & read -r -p "You have selected /dev/d
 sleep 1
 ECHO Format complete!
 sleep 3
-# //owacaddist-srv/GhostImages must be mounted to /Volumes/GhostImages in order for this section to work
+# //owacaddist/GhostImages must be mounted to /Volumes/GhostImages in order for this section to work
 ECHO Copying WinPE files...
 sleep 1
 rsync -vru --progress --delete /Volumes/GhostImages/WinPE/USB/ ~/WinPE
