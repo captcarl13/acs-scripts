@@ -1,12 +1,12 @@
 <#
   NOTE: This script is intended to work only in a preimage environment.
   If you want to create media in an existing Windows environment, follow the documentation
-  located in \\owcaddist-srv\GhostImages\WinPE\WINDOWS PE IMAGE AUTOMATION.docx
+  located in \\owcaddist\GhostImages\WinPE\WINDOWS PE IMAGE AUTOMATION.docx
 
   TO USE THIS SCRIPT:
   After booting into the preboot (PE) environment, press '0' to open a new
   command prompt.
-  type 'powershell .\winpe.ps1'
+  type 'powershell ./winpe.ps1'
   Follow the prompts on-screen.
 #>
 Start-Sleep -s 1
