@@ -1,14 +1,19 @@
 <#
-  NOTE: This script is intended to work only in a preimage environment.
+  NOTE: This script is intended to work only in a preboot (PE) environment.
   If you want to create media in an existing Windows environment, follow the documentation
   located in \\owcaddist\GhostImages\WinPE\WINDOWS PE IMAGE AUTOMATION.docx
 
   TO USE THIS SCRIPT:
-  After booting into the preboot (PE) environment, press '0' to open a new
-  command prompt.
+  After booting into PE, press '0' to open a new command prompt.
   type 'powershell ./winpe.ps1'
   Follow the prompts on-screen.
 #>
+
+<#
+  TODO:
+  Find way to integrate into existing menu. MF said a hidden switch should already exist.
+#>
+
 Start-Sleep -s 1
 Write-Output "NYIT ACS WinPE bootable media creation script, version PowerShell"
 Start-Sleep -s 1
@@ -33,12 +38,12 @@ Write-Output "Copying WinPE files..."
 Start-Sleep -s 1
 robocopy /S /XO /V O:\WinPE\USB\ U:\
 <#
-  robocopy ends here
+  ROBOCOPY ENDS HERE
 #>
 Start-Sleep -s 1
 Write-Output "Bootable USB creation complete!"
 Start-Sleep -s 1
 Write-Output "Please remove the USB drive from the computer."
 <#
-  end of script
+  END OF SCRIPT
 #>
