@@ -7,9 +7,7 @@
   After booting into PE, press '0' to open a new command prompt.
   type 'powershell ./winpe.ps1'
   Follow the prompts on-screen.
-#>
 
-<#
   TODO:
   Find way to integrate into existing menu. MF said a hidden switch should already exist.
 #>
