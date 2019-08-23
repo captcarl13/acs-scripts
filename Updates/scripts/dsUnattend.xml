@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+    <settings pass="specialize">
+        <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <InputLocale>0409:00000409</InputLocale>
+            <SystemLocale>en-US</SystemLocale>
+            <UILanguage>en-US</UILanguage>
+            <UILanguageFallback>en-US</UILanguageFallback>
+            <UserLocale>en-US</UserLocale>
+        </component>
+        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <CopyProfile>true</CopyProfile>
+            <DisableAutoDaylightTimeSet>false</DisableAutoDaylightTimeSet>
+            <DoNotCleanTaskBar>true</DoNotCleanTaskBar>
+            <RegisteredOrganization>NYIT</RegisteredOrganization>
+            <RegisteredOwner>NYIT</RegisteredOwner>
+            <TimeZone>Eastern Standard Time</TimeZone>
+	    <ComputerName></ComputerName>
+            <ShowWindowsLive>false</ShowWindowsLive>
+            <ShowPowerButtonOnStartScreen>true</ShowPowerButtonOnStartScreen>
+            <BluetoothTaskbarIconEnabled>true</BluetoothTaskbarIconEnabled>
+        </component>
+    </settings>
+    <settings pass="generalize">
+        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <OEMInformation>
+                <HelpCustomized>true</HelpCustomized>
+                <Manufacturer>NYIT</Manufacturer>
+                <SupportHours>8 AM - 5 PM EST</SupportHours>
+                <SupportPhone>(516 ) 686-1400</SupportPhone>
+                <SupportURL>http://www.nyit.edu/service_central</SupportURL>
+            </OEMInformation>
+            <BluetoothTaskbarIconEnabled>false</BluetoothTaskbarIconEnabled>
+            <DoNotCleanTaskBar>true</DoNotCleanTaskBar>
+            <RegisteredOrganization>NYIT</RegisteredOrganization>
+            <RegisteredOwner>Registered User</RegisteredOwner>
+        </component>
+        <component name="Microsoft-Windows-Security-SPP" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <SkipRearm>1</SkipRearm>
+        </component>
+    </settings>
+    <settings pass="oobeSystem">
+        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <OOBE>
+                <HideEULAPage>true</HideEULAPage>
+                <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+                <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+                <HideLocalAccountScreen>true</HideLocalAccountScreen>
+                <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+                <NetworkLocation>Other</NetworkLocation>
+                <ProtectYourPC>3</ProtectYourPC>
+                <SkipMachineOOBE>true</SkipMachineOOBE>
+            </OOBE>
+            <DesktopOptimization>
+                <ShowWindowsStoreAppsOnTaskbar>false</ShowWindowsStoreAppsOnTaskbar>
+                <GoToDesktopOnSignIn>true</GoToDesktopOnSignIn>
+            </DesktopOptimization>
+            <WindowsFeatures>
+                <ShowMediaCenter>false</ShowMediaCenter>
+                <ShowWindowsMail>false</ShowWindowsMail>
+            </WindowsFeatures>
+            <AutoLogon>
+                <Password>
+                    <Value>UwBsADMAZABnAGUAaABAAG0AbQBlAHIAIQBQAGEAcwBzAHcAbwByAGQA</Value>
+                    <PlainText>false</PlainText>
+                </Password>
+                <Domain>.</Domain>
+                <Enabled>true</Enabled>
+                <LogonCount>1</LogonCount>
+                <Username>desktopsupport</Username>
+            </AutoLogon>
+            <FirstLogonCommands>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>C:\Utilities\FirstRun.bat</CommandLine>
+                    <Order>1</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+            </FirstLogonCommands>
+        </component>
+        <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <InputLocale>0409:00000409</InputLocale>
+            <SystemLocale>en-US</SystemLocale>
+            <UILanguage>en-US</UILanguage>
+            <UILanguageFallback>en-US</UILanguageFallback>
+            <UserLocale>en-US</UserLocale>
+        </component>
+    </settings>
+
+    <cpi:offlineImage cpi:source="wim:j:/sources/install.wim#Windows 10 Education" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+</unattend>

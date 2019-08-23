@@ -1,0 +1,8 @@
+select disk 0
+clean
+create partition primary
+select partition 1
+format fs=ntfs quick
+REM MBR Disk (should we use GPT)
+active
+assign letter c

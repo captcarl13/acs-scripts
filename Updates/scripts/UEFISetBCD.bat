@@ -1,0 +1,12 @@
+REM Purpose:
+REM Configure boot manager after windows deploy
+REM
+
+bcdboot C:\Windows
+
+bcdedit /set {bootmgr} device partition=s:
+bcdedit /set {memdiag} device partition=s:
+bcdedit /set {default} device partition=c:
+bcdedit /set {default} osdevice partition=c:
+Bcdedit /set {FWbootmgr} displayorder {Bootmgr} /addfirst
+
