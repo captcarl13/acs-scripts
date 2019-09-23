@@ -24,7 +24,7 @@ Get-Disk | Where-Object -FilterScript {$_.Bustype -Eq "USB"} | Clear-Disk -Remov
 Start-Sleep -s 1
 Write-Output "Formatting USB as ACS bootable drive, please stand by..."
 Start-Sleep -s 1
-Get-Disk | Where-Object -FilterScript {$_.Bustype -Eq "USB"} New-Partition -UseMaximumSize -IsActive -DriveLetter U | Format-Volume -FileSystem FAT32 -NewFileSystemLabel ACS
+Get-Disk | Where-Object -FilterScript {$_.Bustype -Eq "USB"} | New-Partition -UseMaximumSize -IsActive -DriveLetter U | Format-Volume -FileSystem FAT32 -NewFileSystemLabel ACS
 <#
   Force assign to always mount USB to a unique drive letter not in use (U:\)
   DISKPART ENDS HERE & ROBOCOPY BEGINS HERE
